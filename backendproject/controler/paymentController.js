@@ -1,10 +1,14 @@
 const { Cashfree } = require("cashfree-pg");
 // const crypto = require("crypto");
-
+require('dotenv').config();
 const crypto = require("crypto");
-Cashfree.XClientId = "TEST103063739f301c978a691cc40b6437360301";
-Cashfree.XClientSecret =
-  "cfsk_ma_test_9ca8a623cbb60493eb84deced75e11c6_0ed92a3a";
+// Cashfree.XClientId = "TEST103063739f301c978a691cc40b6437360301";
+// Cashfree.XClientSecret =
+//   "cfsk_ma_test_9ca8a623cbb60493eb84deced75e11c6_0ed92a3a";
+
+Cashfree.XClientId = process.env.CASHFREE_APP_ID;
+Cashfree.XClientSecret =process.env.CASHFREE_SECRET_KEY;
+
 Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
 function generateOrderId() {
