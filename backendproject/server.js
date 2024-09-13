@@ -43,11 +43,15 @@ app.use('/payment',paymentRoute)
 
 
 
-
+try{
+connect();
 // Start the server
 app.listen(port, () => {
   console.log(`App started on port ${port}`);
 });
+}catch(e){
+  console.log(e)
+}
 
 
 
