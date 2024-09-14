@@ -6,7 +6,7 @@ const patientRouter = require('./routes/patientRoute');
 const doctorRouter = require('./routes/doctorRoute')
 const loginRouter = require('./routes/loginRoute.js')
 const adminRouter = require('./routes/adminRoute.js')
-const specilizationRouter = require('./routes/specilizationroute.js')
+const specilizationRouter = require('./routes/specilizationRoute.js')
 const appointmentRouter = require('./routes/appointmentRoute.js')
 const crypto = require('crypto')
 const { Cashfree } = require("cashfree-pg");
@@ -14,7 +14,7 @@ require('dotenv').config();
 const paymentRoute = require('./routes/paymentRoute')
 
 const app = express();
-const port = 5000;
+const port = process.env.port||5000;
 
 // Enable CORS
 app.use(cors());
