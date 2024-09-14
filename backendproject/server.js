@@ -57,32 +57,4 @@ app.listen(port, () => {
 
 
 
-// app.post("/auth/signup", async (req, res) => {
-//   try {
-//     // Get the form data from the request
-//     const data = req.body.formData;
-//     console.log(data.fname);
 
-//     // Prepare the SQL query
-//     const sql = "INSERT INTO signuppatient (fname, email, phone, username, password, dateOfBirth, gender, address, emergencyContact, medicalHistory) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-//     // Establish a connection to the database
-//     const connection = await connect();
-
-//     // Execute the SQL query
-//     const [result] = await connection.execute(sql, [
-//       data.fname, data.email, data.phone, data.username, data.password,
-//       data.dateOfBirth, data.gender, data.address, data.emergencyContact, data.medicalHistory
-//     ]);
-
-//     console.log("Data added successfully", result);
-//     res.status(200).json({ msg: "Signup successful" });
-
-//     // Close the connection (optional but recommended)
-//     await connection.end();
-
-//   } catch (err) {
-//     console.error("Error inserting data:", err);
-//     res.status(500).json({ msg: "Error inserting data" });
-//   }
-// });
